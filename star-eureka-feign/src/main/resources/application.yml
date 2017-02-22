@@ -3,10 +3,10 @@
 
 spring: 
   application: 
-    name: compute-service
+    name: feign-consumer
 
 server: 
-  port: 2222
+  port: 3333
 
 
 eureka: 
