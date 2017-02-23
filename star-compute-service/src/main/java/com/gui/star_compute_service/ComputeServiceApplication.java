@@ -5,7 +5,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
- * @EnableDiscoveryClient 注解注解能激活Eureka中的DiscoveryClient实现
+ * 注解@EnableDiscoveryClient的作用： 激活Eureka中的DiscoveryClient实现
  * @author wuhoujian
  *
  */

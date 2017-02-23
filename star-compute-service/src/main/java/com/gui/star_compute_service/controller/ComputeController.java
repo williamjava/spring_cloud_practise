@@ -10,6 +10,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 该控制提供所有对外的服务
+ * 
+ * @author wuhoujian
+ *
+ */
 @RestController
 public class ComputeController {
 	private final Logger logger = LoggerFactory.getLogger(ComputeController.class);

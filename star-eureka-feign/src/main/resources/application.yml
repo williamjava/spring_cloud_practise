@@ -6,10 +6,10 @@ spring:
     name: feign-consumer
 
 server: 
-  port: 3333
+  port: 8888
 
 
 eureka: 
   client: 
     serviceUrl: 
-      defaultZone: http://localhost:1111/eureka/
+      defaultZone: http://localhost:1314/eureka/

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * 通过注解@FeignClient来绑定该接口对应compute-service服务
+ * 注解@FeignClient的作用：用来绑定要调用的具体接口compute-service
  * 
  * @author wuhoujian
  *

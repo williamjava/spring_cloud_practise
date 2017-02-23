@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 /**
  * Feign是一个声明式的Web Service客户端，它使得编写Web Serivce客户端变得更加简单
  * 
- * EnableFeignClients 注解开启Feign功能
+ * 注解EnableFeignClients的作用： 开启Feign功能
  * 
  * @author wuhoujian
  *

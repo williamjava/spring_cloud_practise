@@ -6,10 +6,10 @@ spring:
     name: compute-service
 
 server: 
-  port: 2222
+  port: 5555
 
 
 eureka: 
   client: 
     serviceUrl: 
-      defaultZone: http://localhost:1111/eureka/
+      defaultZone: http://localhost:1314/eureka/

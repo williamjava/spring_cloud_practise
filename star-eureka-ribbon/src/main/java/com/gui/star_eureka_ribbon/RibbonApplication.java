@@ -8,9 +8,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * 通过@EnableDiscoveryClient注解来添加发现服务能力
+ * 注解@EnableDiscoveryClient的作用：增加该注解用来添加发现服务能力
  * 
- * 通过@LoadBalanced注解开启均衡负载能力
+ * 注解@LoadBalanced的作用：开启均衡负载能力
  * 
  * @author wuhoujian
  *

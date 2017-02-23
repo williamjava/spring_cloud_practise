@@ -6,6 +6,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * RestTemplate用来调用远程服务
+ * 
+ * @author wuhoujian
+ *
+ */
 @RestController
 public class ConsumerController {
 	@Autowired

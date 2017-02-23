@@ -1,0 +1,3 @@
+该应用作为一个服务提供者，提供的服务会自动添加到star-eureka-server应用创建的服务注册发现中心。
+
+核心注解：@EnableDiscoveryClient
