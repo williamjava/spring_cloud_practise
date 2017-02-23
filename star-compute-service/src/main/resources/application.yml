@@ -6,7 +6,7 @@ spring:
     name: compute-service
 
 server: 
-  port: 5555
+  port: 5557
 
 
 eureka: 

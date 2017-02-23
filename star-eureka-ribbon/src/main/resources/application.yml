@@ -3,7 +3,7 @@ spring:
     name: ribbon-consumer
     
 server: 
-  port: 6666
+  port: 7777
   
 eureka: 
   client: 
