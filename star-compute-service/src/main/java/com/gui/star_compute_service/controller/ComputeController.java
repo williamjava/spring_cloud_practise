@@ -19,6 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ComputeController {
 	private final Logger logger = LoggerFactory.getLogger(ComputeController.class);
+	int count = 0;
+	
 	@Autowired
 	private DiscoveryClient client;
 
@@ -27,6 +29,9 @@ public class ComputeController {
 		ServiceInstance instance = client.getLocalServiceInstance();
 		Integer r = a + b;
 		logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
+		
+		count++;
+		System.out.println("该服务端共被调用了" + count + "次"); 
 		return r;
 	}
 }
