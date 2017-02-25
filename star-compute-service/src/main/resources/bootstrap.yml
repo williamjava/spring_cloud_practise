@@ -1,0 +1,22 @@
+## uri 这个值一定要和配置服务器保持一致
+## name 指定要从git远程仓库读取哪个文件
+## profile 指定读取文件的哪个版本（比如abc-test.yml 或者 abc-dev.yml文件）
+## discovery  服务注册与发现
+#### 注意，最终读取的文件的名字是：name + "-" + profile + ".yml" 文件， 本例中就是读取sample-cloud-client-test.yml文件，这个优先级最高
+#### 如果此文件找不到，接着会去找application-test.yml文件，如果这个文件也没有，最后将会从客户端本地读取
+spring: 
+  application:
+    name: compute-service
+  cloud:
+    config:
+      uri: http://localhost:52099
+      name: sample-cloud-client
+      profile: test
+      
+server: 
+  port: 5557      
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1314/eureka/

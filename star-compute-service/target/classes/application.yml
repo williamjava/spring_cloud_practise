@@ -1,15 +1,5 @@
-###通过spring.application.name属性，我们可以指定微服务的名称后续在调用的时候只需要使用该名称就可以进行服务的访问
-###eureka.client.serviceUrl.defaultZone属性对应服务注册中心的配置内容，指定服务注册中心的位置
-
-spring: 
-  application: 
-    name: compute-service
-
-server: 
-  port: 5557
-
-
-eureka: 
-  client: 
-    serviceUrl: 
-      defaultZone: http://localhost:1314/eureka/
+## 这是来自于client本地的消息，当使用spring cloud配置管理时，一般情况下，远程读取不到对应的值时，才会从本地读取相应的值
+## 设置这些消息是为了测试的时候有个参照，从而确定某个值到底来源于远程的git仓库还是本地保存的值
+author: 
+  name: WilliamLocal
+  age: 66

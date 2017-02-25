@@ -1,0 +1,26 @@
+server:
+  port: 52099
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1314/eureka/
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      ##discovery: 
+       ##enabled: true
+      ##uri: http://localhost:{server.port}
+      server:
+        git:
+          ## uri 配置git仓库位置 
+          uri: https://github.com/williamjava/spring_cloud_practise.git
+          ## searchPaths 配置仓库路径下的相对搜索位置，可以配置多个 
+          searchPaths: config-repository
+          ## username 访问git仓库的用户名
+          username: wuhoujian@126.com
+          ## password 访问git仓库的用户密码 
+          password: william&&0914
