@@ -1,0 +1,19 @@
+spring: 
+  application: 
+    name: api-gateway
+    
+server:
+  port: 9999
+  
+#### Zuul需要知道我们所有服务的地址，才能完成所有的映射配置。而实际上，我们在实现微服务架构时，服务名与服务实例地址的关系在eureka server中已经存在了，
+#### 所以只需要将Zuul注册到eureka server上去发现其他服务，我们就可以实现对serviceId的映射。
+zuul: 
+  routes: 
+    api-compute: 
+      path: /api-compute/**
+      serviceId: compute-service
+  
+eureka:
+  client: 
+    serviceUrl:
+      defaultZone: http://localhost:1314/eureka/
