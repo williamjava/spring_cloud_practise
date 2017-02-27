@@ -5,7 +5,7 @@
 #### 注意，最终读取的文件的名字是：name + "-" + profile + ".yml" 文件， 本例中就是读取sample-cloud-client-test.yml文件，这个优先级最高
 #### 如果此文件找不到，接着会去找application-test.yml文件，如果这个文件也没有，最后将会从客户端本地读取
 spring: 
-  rabbitmq:
+  rabbitmq: 
      host: localhost
      port: 5672
      username: guest

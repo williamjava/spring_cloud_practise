@@ -1,12 +1,18 @@
 server:
   port: 52099
 
+##配置服务注册中心
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1314/eureka/
 
 spring:
+  rabbitmq: 
+     host: localhost
+     port: 5672
+     username: guest
+     password: guest
   application:
     name: config-server
   cloud:

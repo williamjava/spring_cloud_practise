@@ -8,6 +8,8 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 /**
  * 注解@EnableConfigServer的作用：开启ConfigServer，说明该应用是一个分布式配置服务器
  * 
+ * 注解@EnableDiscoveryClient的作用：把ConfigServer注册到服务中心
+ * 
  * @author wuhoujian
  *
  */
