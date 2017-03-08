@@ -20,3 +20,18 @@ sudo pip install docker-compose
 启动：docker-compose up
 查看已经创建的容器实例：docker-compose ps
 创建多个容器实例：docker-compose scale [compose container name]=3
+
+##Dockerfile
+Dockfile是一种被Docker程序解释的脚本，Dockerfile由一条一条的指令组成，每条指令对应Linux下面的一条命令。Docker程序将这些Dockerfile指令翻译真正的Linux命令。
+
+###Dockerfile之FROM
+
+###Dockerfile之VOLUME
+
+###Dockerfile之ADD
+
+###Dockerfile之RUN
+
+###Dockerfile之EXPOSE
+
+###Dockerfile之ENTRYPOINT
