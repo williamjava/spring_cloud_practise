@@ -1,0 +1,4 @@
+configserver:
+  image: williamjian/star-configserver
+  ports:
+   - "52099:52099"

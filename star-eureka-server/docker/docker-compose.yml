@@ -1,0 +1,4 @@
+eureka-server: 
+  image: williamjian/star-eureka-server
+  ports:
+   - "1314:1314"

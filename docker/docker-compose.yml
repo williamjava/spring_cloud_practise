@@ -1,0 +1,27 @@
+eureka-server: 
+  image: williamjian/star-eureka-server
+  ports:
+   - "1314:1314"
+   
+configserver:
+  image: williamjian/star-configserver
+  ports:
+   - "52099:8080"
+  links: 
+   - eureka-server
+
+compute-service: 
+  image: williamjian/star-compute-service
+  ports:
+   - "8080"
+  links: 
+   - eureka-server
+
+eureka-feign: 
+  image: williamjian/star-eureka-feign
+  ports:
+   - "8888:8080"
+  links:
+   - eureka-server
+   - compute-service
+   

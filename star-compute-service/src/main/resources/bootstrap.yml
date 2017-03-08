@@ -6,7 +6,7 @@
 #### 如果此文件找不到，接着会去找application-test.yml文件，如果这个文件也没有，最后将会从客户端本地读取
 spring: 
   rabbitmq: 
-     host: localhost
+     host: 192.168.31.138
      port: 5672
      username: guest
      password: guest
@@ -14,14 +14,14 @@ spring:
     name: compute-service
   cloud:
     config:
-      uri: http://localhost:52099
+      uri: http://192.168.59.103:52099
       name: sample-cloud-client
       profile: test
       
-server: 
-  port: 5558
+##server: 
+  ##port: 5558
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:1314/eureka/
+      defaultZone: http://192.168.59.103:1314/eureka/
