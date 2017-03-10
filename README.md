@@ -71,5 +71,7 @@ eureka-server:
 ```
 
 ###4.maven打包生成本地Docker镜像
+项目更目录下：mvn clean install
 
 ###5.使用Docker-compose启动容器
+docker目录下(有docker-compose.yml的目录)：docker-compse up
