@@ -13,6 +13,7 @@ ab -c 5 -n 20 http://localhost:7777/add
 ##SpringCloud项目集成Docker
 
 ###1.修改pom.xml
+```
 <properties>
 		<!-- 指定要生成Docker镜像的前缀名称 -->
 		<docker.image.prefix>williamjian</docker.image.prefix>
@@ -51,6 +52,7 @@ ab -c 5 -n 20 http://localhost:7777/add
 			</plugin>
 		</plugins>
 	</build>
+```
   
 ###2.Docerfile文件编写
 ```
