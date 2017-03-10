@@ -53,22 +53,22 @@ ab -c 5 -n 20 http://localhost:7777/add
 	</build>
   
 ###2.Docerfile文件编写
-、、、
+```
 FROM java:8
 VOLUME /tmp
 ADD star-eureka-server-0.0.1-SNAPSHOT.jar app.jar
 RUN bash -c 'touch /app.jar'
 EXPOSE 1314
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
-、、、
+```
 
 ###3.docker-compose.yml文件编写
-、、、
+```
 eureka-server: 
   image: williamjian/star-eureka-server
   ports:
    - "1314:1314"
-、、、
+```
 
 ###4.maven打包生成本地Docker镜像
 
