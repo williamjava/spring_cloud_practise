@@ -1,4 +1,2 @@
 compute-service2:
   image: williamjian/star-compute-service
-  ports:
-   - "5555:8080"

@@ -10,7 +10,7 @@ configserver:
   links: 
    - eureka-server
 
-compute-service: 
+compute-service888: 
   image: williamjian/star-compute-service
   ports:
    - "8080"
@@ -23,5 +23,5 @@ eureka-feign:
    - "8888:8080"
   links:
    - eureka-server
-   - compute-service
+   - compute-service888
    

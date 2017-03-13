@@ -5,7 +5,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.59.103:1314/eureka/
+      defaultZone: http://192.168.99.100:1314/eureka/
 
 spring:
   rabbitmq: 
