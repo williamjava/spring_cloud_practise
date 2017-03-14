@@ -5,11 +5,14 @@ Docker Compose 是一个用于定义和运行多容器的Docker应用的工具�
 sudo pip install docker-compose
 
 ##如何使用？
+```
 启动：docker-compose up
 查看已经创建的容器实例：docker-compose ps
 创建多个容器实例：docker-compose scale [compose container name]=3
+```
 
 ##完整的命令列表
+```
 build 构建或重建服务
 help 命令帮助
 kill 杀掉容器
@@ -24,3 +27,4 @@ scale 设置服务的容器数目
 start 开启服务
 stop 停止服务
 up 创建并启动容器
+```
