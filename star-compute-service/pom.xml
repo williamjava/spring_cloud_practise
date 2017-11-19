@@ -11,8 +11,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<docker.image.prefix>williamjian</docker.image.prefix>
-		<docker.plugin.version>0.4.13</docker.plugin.version>
+		<!-- <docker.image.prefix>williamjian</docker.image.prefix>
+		<docker.plugin.version>0.4.13</docker.plugin.version> -->
 	</properties>
 
 	<parent>
@@ -34,10 +34,10 @@
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
+		</dependency> -->
 
 		<!--表示为web工程 -->
 		<dependency>
@@ -45,10 +45,10 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
-		</dependency>
+		</dependency> -->
 
 		<!--暴露各种指标 -->
 		<dependency>
@@ -89,7 +89,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>${docker.plugin.version}</version>
@@ -112,7 +112,7 @@
 						</resource>
 					</resources>
 				</configuration>
-			</plugin>
+			</plugin> -->
 		</plugins>
 	</build>
 </project>

@@ -12,9 +12,9 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- 指定要生成Docker镜像的前缀名称 -->
-		<docker.image.prefix>williamjian</docker.image.prefix>
+		<!-- <docker.image.prefix>williamjian</docker.image.prefix> -->
 		<!-- 指定Docker Maven插件的版本 -->
-		<docker.plugin.version>0.4.13</docker.plugin.version>
+		<!-- <docker.plugin.version>0.4.13</docker.plugin.version> -->
 	</properties>
 
 	<parent>
@@ -30,10 +30,17 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
+		
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -68,7 +75,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>${docker.plugin.version}</version>
@@ -81,11 +88,11 @@
 					</execution>
 				</executions>
 				<configuration>
-					<!-- 定义Docker镜像的名称 -->
+					定义Docker镜像的名称
 					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-					<!-- 指定Dockerfile所在目录 -->
+					指定Dockerfile所在目录
 					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
-					<!-- 指定资源，这里是我们生成的jar，将用于启动到容器 -->
+					指定资源，这里是我们生成的jar，将用于启动到容器
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
@@ -94,7 +101,8 @@
 						</resource>
 					</resources>
 				</configuration>
-			</plugin>
+			</plugin>  -->
+			
 		</plugins>
 	</build>
 </project>

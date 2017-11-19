@@ -7,4 +7,13 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://192.168.99.100:${server.port}/eureka/
+      defaultZone: http://127.0.0.1:${server.port}/eureka/
+      
+###为我们的Eureka服务注册和发现中心添加用户认证
+###添加之后，对应的所有服务提供者和服务消费者，访问的eureka地址都需要做出对应的变更，如：http://william:123456@127.0.0.1:1314/eureka/
+security: 
+  basic: 
+    enabled: true
+  user: 
+    name: william
+    password: 123456
