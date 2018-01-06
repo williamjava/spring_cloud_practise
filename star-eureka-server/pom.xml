@@ -20,7 +20,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.3.5.RELEASE</version>
+		<version>1.4.3.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -30,17 +30,17 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
-		
+
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -49,19 +49,20 @@
 		</dependency>
 	</dependencies>
 
+	<!-- 引入spring cloud的依赖 -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Brixton.RELEASE</version>
+				<version>Camden.SR4</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
-
+	<!-- 添加spring-boot的maven插件 -->
 	<build>
 		<plugins>
 			<plugin>
@@ -75,34 +76,15 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- <plugin>
-				<groupId>com.spotify</groupId>
-				<artifactId>docker-maven-plugin</artifactId>
-				<version>${docker.plugin.version}</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>build</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					定义Docker镜像的名称
-					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-					指定Dockerfile所在目录
-					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
-					指定资源，这里是我们生成的jar，将用于启动到容器
-					<resources>
-						<resource>
-							<targetPath>/</targetPath>
-							<directory>${project.build.directory}</directory>
-							<include>${project.build.finalName}.jar</include>
-						</resource>
-					</resources>
-				</configuration>
-			</plugin>  -->
-			
+			<!-- <plugin> <groupId>com.spotify</groupId> <artifactId>docker-maven-plugin</artifactId> 
+				<version>${docker.plugin.version}</version> <executions> <execution> <phase>package</phase> 
+				<goals> <goal>build</goal> </goals> </execution> </executions> <configuration> 
+				定义Docker镜像的名称 <imageName>${docker.image.prefix}/${project.artifactId}</imageName> 
+				指定Dockerfile所在目录 <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory> 
+				指定资源，这里是我们生成的jar，将用于启动到容器 <resources> <resource> <targetPath>/</targetPath> 
+				<directory>${project.build.directory}</directory> <include>${project.build.finalName}.jar</include> 
+				</resource> </resources> </configuration> </plugin> -->
+
 		</plugins>
 	</build>
 </project>
