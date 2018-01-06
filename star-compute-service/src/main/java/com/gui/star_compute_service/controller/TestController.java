@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 	@RequestMapping(value = "/say", method = RequestMethod.GET)
-	public String sayHi(){
-		return "Hello, I am hot deployment.111";
+	public String sayHi() {
+		String msg = "Hello, I am william. How are you. See u tmr.";
+		return msg;
 	}
 }
