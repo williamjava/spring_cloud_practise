@@ -1,22 +1,20 @@
 spring: 
   application: 
     name: star-eureka-server
-
+    
 ---
-
 spring: 
-  ###指定profile=peer1
   profiles: peer1
+  
 ###在默认设置下，该服务注册中心也会将自己作为客户端来尝试注册它自己，所以我们需要禁用它的客户端注册行为
 server:
   port: 1314
+  
 eureka:
   instance: 
     # 指定当profile=peer1时，主机名是peer1
     hostname: peer1
   client: 
-    #registerWithEureka: false
-    #fetchRegistry: false
     serviceUrl:
       # 将自己注册到peer2这个Eureka Server上面
       defaultZone: http://william:123456@peer2:1315/eureka/
@@ -31,20 +29,19 @@ security:
     password: 123456
       
 ---
-
 spring: 
   ###指定profile=peer2
   profiles: peer2
+  
 ###在默认设置下，该服务注册中心也会将自己作为客户端来尝试注册它自己，所以我们需要禁用它的客户端注册行为
 server:
   port: 1315
+  
 eureka:
   instance: 
     # 指定当profile=peer2时，主机名是peer2
     hostname: peer2
   client: 
-    #registerWithEureka: false
-    #fetchRegistry: false
     serviceUrl:
       # 将自己注册到peer2这个Eureka Server上面
       defaultZone: http://william:123456@peer1:1314/eureka/
