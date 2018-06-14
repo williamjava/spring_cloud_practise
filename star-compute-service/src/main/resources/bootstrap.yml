@@ -12,6 +12,11 @@ spring:
 ##     password: guest
   application:
     name: compute-service
+  rabbitmq: 
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   redis:
     ##Redis数据库索引（默认为0）
     database: 0
@@ -51,8 +56,8 @@ server:
 eureka:
   client:
     serviceUrl:
-      ##defaultZone: http://william:123456@peer1:1314/eureka/
-      defaultZone: http://william:123456@localhost:1314/eureka/
+      defaultZone: http://william:123456@peer1:1314/eureka/
+      ##defaultZone: http://william:123456@localhost:1314/eureka/
     healthcheck: 
       enabled: true
       

@@ -33,6 +33,7 @@
 			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
 		
+		<!-- 整合redis -->
 		<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -43,6 +44,12 @@
 		        <groupId>redis.clients</groupId>
 		        <artifactId>jedis</artifactId>
 		</dependency>
+		
+		<!-- 整合rabbitMQ -->
+		<dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-amqp</artifactId>
+	    </dependency>
 
 		<!-- 整合Sleuth，用来跟踪服务 -->
 		<dependency>
