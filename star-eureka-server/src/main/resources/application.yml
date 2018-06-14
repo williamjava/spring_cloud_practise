@@ -1,4 +1,4 @@
 ##使用yml配置文件时，读取属性值必须使用@@的方式
 spring:
   profiles:
-    active: 'dev'
+    active: '@profileActive@'
