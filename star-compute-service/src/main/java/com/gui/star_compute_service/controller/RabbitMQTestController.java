@@ -1,16 +1,12 @@
 package com.gui.star_compute_service.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.gui.star_compute_service.util.RabbitMQUtil;
-import com.gui.star_compute_service.util.RedisUtil;
-import com.gui.star_compute_service.vo.UserVo;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;

@@ -1,11 +1,14 @@
 package com.gui.star_compute_service.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.client.serviceregistry.Registration;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,6 +41,9 @@ public class ComputeController {
 
 	@Value("${author.age}")
 	private Integer age;
+	
+	@Autowired
+	private Registration registration;
 
 	@Autowired
 	private DiscoveryClient client;
@@ -57,7 +63,7 @@ public class ComputeController {
 			@ApiImplicitParam(name = "b", value = "第二个数", required = true, dataType = "int", paramType = "query") })
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
-		ServiceInstance instance = client.getLocalServiceInstance();
+		ServiceInstance instance = serviceInstance();
 		Integer r = a + b;
 		logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
 
@@ -84,4 +90,15 @@ public class ComputeController {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
+	
+	public ServiceInstance serviceInstance() {
+        List<ServiceInstance> list = client.getInstances(registration.getServiceId());
+        if (list != null && list.size() > 0) {
+            for(ServiceInstance itm : list){
+                if(itm.getPort() == 2001)
+                    return itm;
+            }   
+        }
+        return null;
+    }
 }

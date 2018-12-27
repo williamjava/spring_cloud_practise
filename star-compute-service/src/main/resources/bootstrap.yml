@@ -5,18 +5,18 @@
 #### 注意，最终读取的文件的名字是：name + "-" + profile + ".yml" 文件， 本例中就是读取sample-cloud-client-test.yml文件，这个优先级最高
 #### 如果此文件找不到，接着会去找application-test.yml文件，如果这个文件也没有，最后将会从客户端本地读取
 spring: 
-##  rabbitmq: 
-##     host: 127.0.0.1
-##     port: 5672
-##     username: guest
-##     password: guest
+  rabbitmq: 
+     host: 127.0.0.1
+     port: 5672
+     username: guest
+     password: guest
   application:
     name: compute-service
-  rabbitmq: 
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+  #rabbitmq: 
+    #host: localhost
+    #port: 5672
+    #username: guest
+    #password: guest
   redis:
     ##Redis数据库索引（默认为0）
     database: 0
@@ -48,16 +48,12 @@ spring:
 ##      uri: http://127.0.0.1:52099
 ##      name: sample-cloud-client
 ##      profile: test
-      
-server: 
-  port: 5558
-  
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://william:123456@peer1:1314/eureka/
-      ##defaultZone: http://william:123456@localhost:1314/eureka/
+      ##defaultZone: http://william:123456@peer1:1314/eureka/
+      defaultZone: http:/localhost:1314/eureka/
     healthcheck: 
       enabled: true
       
