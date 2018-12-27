@@ -20,6 +20,6 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 public class ComputeServiceApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(ComputeServiceApplication.class, args);
+		SpringApplication.run(ComputeServiceApplication.class, "--server.port=5559");
 	}
 }

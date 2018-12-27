@@ -57,11 +57,11 @@
 		</dependency>
 
 		<!-- 用于Sleuth 和ELK配合使用 -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>net.logstash.logback</groupId>
 			<artifactId>logstash-logback-encoder</artifactId>
 			<version>4.6</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- <dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-sleuth-zipkin</artifactId> 
 			</dependency> -->
@@ -78,11 +78,16 @@
 		<!-- <dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-starter-bus-amqp</artifactId> 
 			</dependency> -->
 
-		<!--暴露各种指标 -->
+		<!--暴露各种监控指标 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 			<optional>true</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
 		</dependency>
 
 		<dependency>
