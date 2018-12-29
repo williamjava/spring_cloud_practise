@@ -1,5 +1,6 @@
 package com.gui.star_zuul;
 
+import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
@@ -19,9 +20,9 @@ import com.gui.star_zuul.filter.AccessFilter;
 @SpringCloudApplication
 public class ZuulApplication {
 	public static void main(String[] args) {
-		new SpringApplicationBuilder(ZuulApplication.class).web(true).run(args);
+		new SpringApplicationBuilder(ZuulApplication.class).web(WebApplicationType.SERVLET).run(args);
 	}
-	
+
 	@Bean
 	public AccessFilter accessFilter() {
 		return new AccessFilter();
