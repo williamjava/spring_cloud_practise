@@ -2,6 +2,7 @@ package com.gui.star_compute_service.controller;
 
 import java.util.List;
 
+import com.gui.star_compute_service.form.CalcForm;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,10 +52,6 @@ public class ComputeController {
 	/**
 	 * 求和
 	 * 
-	 * @param a
-	 *            第一个数
-	 * @param b
-	 *            第二个数
 	 * @return 和
 	 */
 	@ApiOperation(value = "求和", notes = "求和", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -62,9 +59,9 @@ public class ComputeController {
 			@ApiImplicitParam(name = "a", value = "第一个数", required = true, dataType = "int", paramType = "query"),
 			@ApiImplicitParam(name = "b", value = "第二个数", required = true, dataType = "int", paramType = "query") })
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
-	public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
+	public Integer add(CalcForm form) {
 		ServiceInstance instance = serviceInstance();
-		Integer r = a + b;
+		Integer r = form.getA() + form.getB();
 		logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
 
 		count++;
@@ -90,15 +87,19 @@ public class ComputeController {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
-	
+
+	/**
+	 * 获取服务实例信息
+	 * @return
+	 */
 	public ServiceInstance serviceInstance() {
         List<ServiceInstance> list = client.getInstances(registration.getServiceId());
         if (list != null && list.size() > 0) {
-            for(ServiceInstance itm : list){
-                if(itm.getPort() == 5558)
-                    return itm;
-            }   
-        }
-        return null;
+			for(ServiceInstance itm : list){
+				if(itm.getPort() == 5558)
+					return itm;
+			}
+		}
+		return null;
     }
 }

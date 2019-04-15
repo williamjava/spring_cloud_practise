@@ -4,7 +4,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * 注解@EnableDiscoveryClient的作用： 激活Eureka中的DiscoveryClient实现，用来发现服务注册中心的其他服务
@@ -14,12 +13,11 @@ import org.springframework.context.annotation.ComponentScan;
  * @author wuhoujian
  *
  */
-@ComponentScan(basePackages = "com.gui.star_compute_service")
 @EnableCaching
 @EnableDiscoveryClient
 @SpringBootApplication
 public class ComputeServiceApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(ComputeServiceApplication.class, "--server.port=5559");
+		SpringApplication.run(ComputeServiceApplication.class);
 	}
 }

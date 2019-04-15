@@ -29,8 +29,7 @@ public class RabbitMQTestController {
 	/**
 	 * 发送消息
 	 * 
-	 * @param key
-	 * @param value
+	 * @param msg
 	 * @return
 	 */
 	@ApiOperation(value = "发送消息", notes = "发送消息", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

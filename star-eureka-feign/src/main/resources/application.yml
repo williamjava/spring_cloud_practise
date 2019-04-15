@@ -23,8 +23,9 @@ eureka:
   client: 
     serviceUrl: 
       ##defaultZone: http://william:123456@peer1:1314/eureka/,http://william:123456@peer2:1315/eureka/
-      defaultZone: http://william:123456@localhost:1314/eureka/
-      
+      #defaultZone: http://william:123456@localhost:1314/eureka/
+      defaultZone: http://localhost:1314/eureka/
+
 logging: 
   level: 
     root: INFO

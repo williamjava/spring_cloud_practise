@@ -10,13 +10,13 @@ spring:
     
 ###在默认设置下，该服务注册中心也会将自己作为客户端来尝试注册它自己，所以我们需要禁用它的客户端注册行为
 server:
-  port: 1314
-  
-eureka:
-  client: 
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://localhost:1314/eureka/
-  server:
-    enableSelfPreservation: false
+                              port: 1314
+
+                              eureka:
+                                client:
+                                  registerWithEureka: false
+                                  fetchRegistry: false
+                                  serviceUrl:
+                                    defaultZone: http://localhost:1314/eureka/
+                                server:
+                                  enableSelfPreservation: false
