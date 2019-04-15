@@ -5,11 +5,11 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://192.168.99.100:1314/eureka/
+      defaultZone: http://localhost:1314/eureka/
 
 spring:
   rabbitmq: 
-     host: 192.168.31.138
+     host: localhost
      port: 5672
      username: guest
      password: guest
@@ -19,7 +19,7 @@ spring:
     config:
       ##discovery: 
        ##enabled: true
-      ##uri: http://localhost:{server.port}
+      #uri: http://localhost:{server.port}
       server:
         git:
           ## uri 配置git仓库位置 
