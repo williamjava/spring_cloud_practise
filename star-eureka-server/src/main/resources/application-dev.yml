@@ -1,7 +1,13 @@
 spring: 
   application: 
     name: star-eureka-server
-    
+  ###为我们的Eureka服务注册和发现中心添加用户认证
+  ###添加之后，对应的所有服务提供者和服务消费者，访问的eureka地址都需要做出对应的变更，如：http://william:123456@127.0.0.1:1314/eureka/
+  security:
+    user:
+      name: william
+      password: 123456
+
 ###在默认设置下，该服务注册中心也会将自己作为客户端来尝试注册它自己，所以我们需要禁用它的客户端注册行为
 server:
   port: 1314
@@ -14,12 +20,3 @@ eureka:
       defaultZone: http://localhost:1314/eureka/
   server:
     enableSelfPreservation: false
-  
-###为我们的Eureka服务注册和发现中心添加用户认证
-###添加之后，对应的所有服务提供者和服务消费者，访问的eureka地址都需要做出对应的变更，如：http://william:123456@127.0.0.1:1314/eureka/
-security: 
-  basic: 
-    enabled: true
-  user: 
-    name: william
-    password: 123456

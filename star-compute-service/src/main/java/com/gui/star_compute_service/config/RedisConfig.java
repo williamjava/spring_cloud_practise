@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * redis的配置
- * 
+ *
  * @author wuhoujian
  *
  */
@@ -64,7 +64,7 @@ public class RedisConfig extends CachingConfigurerSupport {
 
 	/**
 	 * RedisTemplate配置
-	 * 
+	 *
 	 * @param factory
 	 * @return
 	 */

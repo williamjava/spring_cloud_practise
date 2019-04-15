@@ -18,6 +18,10 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
  * 该控制提供所有对外的服务
  * 
@@ -57,7 +61,13 @@ public class ComputeController {
 			@ApiImplicitParam(name = "b", value = "第二个数", required = true, dataType = "int", paramType = "query") })
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
-		ServiceInstance instance = client.getLocalServiceInstance();
+		Map<String, List<ServiceInstance>> msl = new HashMap<>();
+		List<String> services = client.getServices();
+		for (String service : services) {
+			List<ServiceInstance> sis = client.getInstances(service);
+			msl.put(service, sis);
+		}
+		ServiceInstance instance = msl.get("compute-service").get(0);
 		Integer r = a + b;
 		logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
 
