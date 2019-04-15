@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../star-compute-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../star-eureka-feign/pom.xml" />
       </list>
     </option>
   </component>

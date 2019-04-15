@@ -12,11 +12,11 @@ spring:
 ##     password: guest
   application:
     name: compute-service
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
   redis:
     ##Redis数据库索引（默认为0）
     database: 0
@@ -25,7 +25,7 @@ spring:
     ##Redis服务器连接端口
     port: 6379
     ##Redis服务器连接密码（默认为空）
-    password: 
+    password:
     ##连接超时时间（毫秒）
     timeout: 0
     ##连接池相关参数设置
@@ -57,7 +57,7 @@ eureka:
     serviceUrl:
       #defaultZone: http://william:123456@peer1:1314/eureka/
       defaultZone: http://william:123456@localhost:1314/eureka/
-    healthcheck: 
+    healthcheck:
       enabled: true
       
 logging: 

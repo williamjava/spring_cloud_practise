@@ -46,23 +46,23 @@
 		</dependency>
 		
 		<!-- 整合rabbitMQ -->
-		<dependency>
-	        <groupId>org.springframework.boot</groupId>
-	        <artifactId>spring-boot-starter-amqp</artifactId>
-	    </dependency>
+		<!--<dependency>-->
+	        <!--<groupId>org.springframework.boot</groupId>-->
+	        <!--<artifactId>spring-boot-starter-amqp</artifactId>-->
+	    <!--</dependency>-->
 
 		<!-- 整合Sleuth，用来跟踪服务 -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-sleuth</artifactId>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.cloud</groupId>-->
+			<!--<artifactId>spring-cloud-starter-sleuth</artifactId>-->
+		<!--</dependency>-->
 
 		<!-- 用于Sleuth 和ELK配合使用 -->
-		<dependency>
-			<groupId>net.logstash.logback</groupId>
-			<artifactId>logstash-logback-encoder</artifactId>
-			<version>4.6</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>net.logstash.logback</groupId>-->
+			<!--<artifactId>logstash-logback-encoder</artifactId>-->
+			<!--<version>4.6</version>-->
+		<!--</dependency>-->
 
 		<!-- <dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-sleuth-zipkin</artifactId> 
 			</dependency> -->
@@ -134,21 +134,21 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<!-- <configuration> <fork>true</fork> </configuration> -->
 
-				<dependencies>    <!-- 修改代码后自动生效，Reload Java classes without restarting the container -->
-					<dependency>
-						<groupId>org.springframework</groupId>
-						<artifactId>springloaded</artifactId>
-						<version>1.2.6.RELEASE</version>
-					</dependency>
-				</dependencies>
+				<!--<dependencies>    &lt;!&ndash; 修改代码后自动生效，Reload Java classes without restarting the container &ndash;&gt;-->
+					<!--<dependency>-->
+						<!--<groupId>org.springframework</groupId>-->
+						<!--<artifactId>springloaded</artifactId>-->
+						<!--<version>1.2.6.RELEASE</version>-->
+					<!--</dependency>-->
+				<!--</dependencies>-->
 
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
+				<!--<executions>-->
+					<!--<execution>-->
+						<!--<goals>-->
+							<!--<goal>repackage</goal>-->
+						<!--</goals>-->
+					<!--</execution>-->
+				<!--</executions>-->
 			</plugin>
 			<!-- <plugin> <groupId>com.spotify</groupId> <artifactId>docker-maven-plugin</artifactId> 
 				<version>${docker.plugin.version}</version> <executions> <execution> <phase>package</phase> 
