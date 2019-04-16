@@ -57,6 +57,15 @@ eureka:
       defaultZone: http://localhost:1314/eureka/
     #healthcheck: 
       #enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
       
 logging: 
   level: 

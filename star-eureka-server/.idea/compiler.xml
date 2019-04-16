@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="star-compute-service" />
+        <module name="star-configserver" />
+        <module name="star-eureka-feign" />
+        <module name="star-eureka-ribbon" />
+        <module name="star-eureka-server" />
+        <module name="star-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="star-compute-service" target="1.8" />
+      <module name="star-configserver" target="1.8" />
+      <module name="star-eureka-feign" target="1.8" />
+      <module name="star-eureka-ribbon" target="1.8" />
+      <module name="star-eureka-server" target="1.8" />
+      <module name="star-zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="star-compute-service" options="-parameters" />
+      <module name="star-configserver" options="-parameters" />
+      <module name="star-eureka-feign" options="-parameters" />
+      <module name="star-eureka-ribbon" options="-parameters" />
+      <module name="star-eureka-server" options="-parameters" />
+      <module name="star-zuul" options="-parameters" />
+    </option>
+  </component>
+</project>

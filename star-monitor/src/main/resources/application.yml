@@ -1,0 +1,28 @@
+server:
+  port: 9412
+spring:
+  application:
+    name: star-monitor
+  security:
+    user:
+      name: star
+      password: star666
+  boot:
+    admin:
+      ui:
+        title: STAR-MONITOR
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+eureka:
+  client:
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://localhost:1314/eureka/

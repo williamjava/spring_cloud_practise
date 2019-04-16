@@ -60,6 +60,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!--暴露各种监控指标 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+			<optional>true</optional>
+		</dependency>
 		
 		<dependency>
 			<groupId>junit</groupId>
