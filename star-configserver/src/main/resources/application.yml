@@ -30,3 +30,10 @@ spring:
           username: wuhoujian@126.com
           ## password 访问git仓库的用户密码 
           password: william&&0914
+
+##自动刷新配置：http://localhost:52099/actuator/bus-refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

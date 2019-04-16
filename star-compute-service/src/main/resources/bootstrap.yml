@@ -1,0 +1,64 @@
+## uri 这个值一定要和配置服务器保持一致
+## name 指定要从git远程仓库读取哪个文件
+## profile 指定读取文件的哪个版本（比如abc-test.yml 或者 abc-dev.yml文件）
+## discovery  服务注册与发现
+#### 注意，最终读取的文件的名字是：name + "-" + profile + ".yml" 文件， 本例中就是读取sample-cloud-client-test.yml文件，这个优先级最高
+#### 如果此文件找不到，接着会去找application-test.yml文件，如果这个文件也没有，最后将会从客户端本地读取
+spring: 
+  rabbitmq: 
+     host: 127.0.0.1
+     port: 5672
+     username: guest
+     password: guest
+  application: 
+    name: compute-service
+  redis:
+    ##Redis数据库索引（默认为0）
+    database: 0
+    ##Redis服务器地址
+    host: localhost
+    ##Redis服务器连接端口
+    port: 6379
+    ##Redis服务器连接密码（默认为空）
+    password: 
+    ##连接超时时间（毫秒）
+    timeout: 0
+    ##连接池相关参数设置
+#    pool:
+#      ##连接池最大连接数（使用负值表示没有限制）
+#      max-active: 8
+#      ##连接池最大阻塞等待时间（使用负值表示没有限制）
+#      max-wait: -1
+#      ##连接池中的最大空闲连接
+#      max-idle: 8
+#      ##连接池中的最小空闲连接
+#      min-idle: 0
+  ##zipkin:
+    ##base-url: http://localhost:9411
+  ##sleuth:
+    ##sampler:
+      ##percentage: 1.0
+  cloud:
+    config:
+      uri: http://127.0.0.1:52099
+      name: application
+      profile: test
+      discovery:
+        enabled: true
+        service-id: config-server
+
+server: 
+  port: 5558
+
+eureka:
+  client:
+    serviceUrl:
+      ##defaultZone: http://william:123456@peer1:1314/eureka/
+      defaultZone: http://localhost:1314/eureka/
+    #healthcheck: 
+      #enabled: true
+      
+logging: 
+  level: 
+    root: INFO
+    org.springframework.web.servlet.DispatcherServlet: DEBUG
