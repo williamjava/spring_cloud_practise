@@ -1,0 +1,15 @@
+server:
+  port: 5558
+
+spring:
+  application:
+    name: compute-service-consul
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        tags: version=1.0,author=wuhoujian
+        healthCheckPath: /info.json
+        healthCheckInterval: 5s
+        health-check-url: http://${spring.cloud.client.ip-address}:${server.port}/actuator/health
