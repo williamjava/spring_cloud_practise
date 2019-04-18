@@ -14,9 +14,11 @@ server:
 
 eureka:
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    ##不注册自己
+    #registerWithEureka: false
+    #fetchRegistry: false
     serviceUrl:
       defaultZone: http://localhost:1314/eureka/
   server:
-    enableSelfPreservation: false
+    ##关闭自我保护机制，可以确保服务注册中心不可用的实例及时剔除(不推荐)，不统计上线率；生产环境需要打开；
+    #enableSelfPreservation: false

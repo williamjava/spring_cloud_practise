@@ -110,7 +110,7 @@ public class RedisUtil {
 			}
 			result = true;
 		} catch (Exception e) {
-			log.error("删除redis中存在的一个键出现异常", e);
+			log.error("set出现异常", e);
 		}
 
 		return result;
