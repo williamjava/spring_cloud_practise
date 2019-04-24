@@ -1,5 +1,7 @@
 #My practise on SpringCloud, based on SpringBoot.
 
+分支latest为最新的内容.
+
 It's easy for us to make a micro-service architecture using Spring Cloud.
 
 Here we need to know that what's micro-service. Just make it easy, micro-service is a concept. Its purpose is to make a complicate application into many small services. Each service can be built,maintained and extended alone. In my opinion, it's awesome.
