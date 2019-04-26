@@ -49,7 +49,7 @@ spring:
         service-id: config-server
 
 server: 
-  port: 5558
+  port: 8520
 
 eureka:
   client:

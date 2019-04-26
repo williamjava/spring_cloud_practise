@@ -16,7 +16,7 @@ spring:
       percentage: 1.0
 
 server: 
-  port: 8888
+  port: 8522
 
 eureka:
   client: 
