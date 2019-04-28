@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../star-compute-service/star-compute-service.iml" filepath="$PROJECT_DIR$/../star-compute-service/star-compute-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../star-compute-service-consul/star-compute-service-consul.iml" filepath="$PROJECT_DIR$/../star-compute-service-consul/star-compute-service-consul.iml" />
       <module fileurl="file://$PROJECT_DIR$/../star-configserver/star-configserver.iml" filepath="$PROJECT_DIR$/../star-configserver/star-configserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/../star-eureka-feign/star-eureka-feign.iml" filepath="$PROJECT_DIR$/../star-eureka-feign/star-eureka-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/../star-eureka-ribbon/star-eureka-ribbon.iml" filepath="$PROJECT_DIR$/../star-eureka-ribbon/star-eureka-ribbon.iml" />

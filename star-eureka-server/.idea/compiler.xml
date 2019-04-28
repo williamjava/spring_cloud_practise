@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="star-compute-service" />
+        <module name="star-compute-service-consul" />
         <module name="star-configserver" />
         <module name="star-eureka-feign" />
         <module name="star-eureka-ribbon" />
@@ -16,6 +17,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="star-compute-service" target="1.8" />
+      <module name="star-compute-service-consul" target="1.8" />
       <module name="star-configserver" target="1.8" />
       <module name="star-eureka-feign" target="1.8" />
       <module name="star-eureka-ribbon" target="1.8" />
@@ -26,6 +28,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="star-compute-service" options="-parameters" />
+      <module name="star-compute-service-consul" options="-parameters" />
       <module name="star-configserver" options="-parameters" />
       <module name="star-eureka-feign" options="-parameters" />
       <module name="star-eureka-ribbon" options="-parameters" />
