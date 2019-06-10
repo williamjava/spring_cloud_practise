@@ -13,6 +13,8 @@
         <option value="$PROJECT_DIR$/../star-zuul/pom.xml" />
         <option value="$PROJECT_DIR$/../star-configserver/pom.xml" />
         <option value="$PROJECT_DIR$/../star-compute-service-consul/pom.xml" />
+        <option value="$PROJECT_DIR$/../star-zk-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/../star-zk-consumer/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: zk-consumer
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+      enabled: true
+      register: true
+
+server:
+  port: 8082
+
+logging:
+  level:
+    org.apache.zookeeper.ClientCnxn: WARN

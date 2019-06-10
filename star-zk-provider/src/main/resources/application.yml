@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: zk-provider
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+      discovery:
+        enabled: true
+        register: true
+
+server:
+  port: 8081
+
+endpoints:
+  restart:
+    enabled: true
+
+logging:
+  level:
+    org.apache.zookeeper.ClientCnxn: WARN
