@@ -96,7 +96,7 @@ public class ComputeController {
         List<ServiceInstance> list = client.getInstances(registration.getServiceId());
         if (list != null && list.size() > 0) {
 			for(ServiceInstance itm : list){
-				if(itm.getPort() == 5558)
+				if(itm.getPort() == 8520)
 					return itm;
 			}
 		}
